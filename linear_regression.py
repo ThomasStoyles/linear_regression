@@ -38,7 +38,7 @@ def gradient_descent(m_now, b_now, points, L_rate):
 m = 0 
 b = 0
 L_rate = 0.0001
-epoch = 300
+epoch = 1000
 
 for i in range(epoch):
     if i % 50 == 0:
