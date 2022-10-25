@@ -29,16 +29,16 @@ def gradient_descent(m_now, b_now, points, L_rate):
         y = points.iloc[i].Salary
 
         m_gradient += -(2/n) * x * (y - (m_now * x + b_now))
-        m_gradient += -(2/n) * (y - (m_now * x + b_now))
+        b_gradient += -(2/n) * (y - (m_now * x + b_now))
 
-    m - m_now - m_gradient * L_rate
-    b - b_now - b_gradient * L_rate
+    m = m_now - m_gradient * L_rate
+    b = b_now - b_gradient * L_rate
     return m, b
 
 m = 0 
 b = 0
-L_rate = 0.001
-epoch = 1000
+L_rate = 0.0001
+epoch = 300
 
 for i in range(epoch):
     if i % 50 == 0:
